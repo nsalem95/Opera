@@ -9,14 +9,26 @@
     <meta name="author" content="">
 
     <title>Cairo Opera House</title>
+    <style type="text/css">
+      ul.dropdown-lr {
+  width: 300px;
+}
 
+/* mobile fix */
+@media (max-width: 768px) {
+  .dropdown-lr h3 {
+    color: #eee;
+  }
+  .dropdown-lr label {
+    color: #eee;
+  }
+}
+    </style>
     <!-- Bootstrap core CSS -->
     <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for the carousel -->
     <link href="css/carousel.css" rel="stylesheet">
-    <!--dropdown menus navbar css-->
-    <link rel="stylesheet" type="text/css" href="css/navdropdown.css">
   </head>
   <body>
     <nav class="navbar navbar-static-top navbar-light bg-faded">
@@ -36,11 +48,11 @@
         </li>
       </ul>
       <ul class="nav navbar-nav navbar-right pull-right">
-        <li class="dropdown" style="float:right;">
-            <a href="http://phpoll.com/register" class="dropdown-toggle nav-link" data-toggle="dropdown">&nbsp; Register <span class="caret"></span></a>
-            <ul class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">
-                <div class="col-lg-12">
-                    <div class="text-center"><h3><b>Register</b></h3></div>
+                    <li class="dropdown" style="float:right;">
+                        <a href="http://phpoll.com/register" class="dropdown-toggle nav-link" data-toggle="dropdown">&nbsp; Register <span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">
+                            <div class="col-lg-12">
+                                <div class="text-center"><h3><b>Register</b></h3></div>
                 <form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
                   <div class="form-group">
                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
@@ -161,11 +173,7 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
-     <!-- FOOTER -->
-      <footer>
-        <p class="float-xs-right"><a href="#">Back to top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
-        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Cairo Opera House &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
+
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
