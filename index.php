@@ -37,11 +37,11 @@
       </ul>
       <ul class="nav navbar-nav navbar-right pull-right">
         <li class="dropdown" style="float:right;">
-            <a href="http://phpoll.com/register" class="dropdown-toggle nav-link" data-toggle="dropdown">&nbsp; Register <span class="caret"></span></a>
+            <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">&nbsp; Register <span class="caret"></span></a>
             <ul class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">
                 <div class="col-lg-12">
                     <div class="text-center"><h3><b>Register</b></h3></div>
-                <form id="ajax-register-form" action="http://phpoll.com/register/process" method="post" role="form" autocomplete="off">
+                <form id="ajax-register-form" action="signup.php" method="post" role="form" autocomplete="off">
                   <div class="form-group">
                     <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
@@ -52,26 +52,22 @@
                     <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="confirm-password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password">
-                  </div>
-                  <div class="form-group">
                     <div class="row">
                       <div class="col-xs-6 col-xs-offset-3">
                         <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary" value="Register Now">
                       </div>
                     </div>
                   </div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="7c6f19960d63f53fcd05c3e0cbc434c0">
                 </form>
                             </div>
                         </ul>
                     </li>
                     <li class="dropdown" style="float:right;">
-                        <a href="http://phpoll.com/login" class="dropdown-toggle nav-link" data-toggle="dropdown">Log In<span class="caret"></span></a>
+                        <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">Log In<span class="caret"></span></a>
                         <ul class="dropdown-menu dropdown-menu-right dropdown-lr animated slideInRight" role="menu">
                             <div class="col-lg-12">
                                 <div class="text-center"><h3><b>Log In</b></h3></div>
-                                <form id="ajax-login-form" action="http://phpoll.com/login/process" method="post" role="form" autocomplete="off">
+                                <form id="ajax-login-form" action="loginphp.php" method="post" role="form" autocomplete="off">
                                     <div class="form-group">
                                         <label for="username">Username</label>
                                         <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
@@ -103,7 +99,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <input type="hidden" class="hide" name="token" id="token" value="a465a2791ae0bae853cf4bf485dbe1b6">
                                 </form>
                             </div>
                         </ul>
@@ -162,6 +157,7 @@
       </a>
     </div><!-- /.carousel -->
      <!-- FOOTER -->
+     <hr>
       <footer>
         <p class="float-xs-right"><a href="#">Back to top&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a></p>
         <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&copy; Cairo Opera House &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
