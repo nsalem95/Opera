@@ -1,6 +1,8 @@
 <?php
 	$uname=$_POST["username"];
 	$pass=$_POST["password"];
+	$remember=$_POST["remember"];
+	
 	$con=mysql_connect("localhost", "root", "");
 	if (!$con) {
 		die('could not connect: '.mysql_error());
@@ -11,6 +13,7 @@
 	$x=mysql_fetch_row($r);
 	if($x)
 	{
+		
 		session_start();
 		$_SESSION['uname'] = $uname;
 		echo "<script>setTimeout(\"location.href = 'index.php';\",0);</script>";

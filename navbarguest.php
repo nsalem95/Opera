@@ -59,9 +59,11 @@
 
                                     <div class="form-group">
                                         <div class="row">
-                                            <div class="col-xs-7">
-                                                <input type="checkbox" tabindex="3" name="remember" id="remember">
+                                            <div style="margin-top: 2.5%;" class="col-xs-7">
+                                                <!--<input type="checkbox" tabindex="3" name="remember" id="remember" value = "remember">
                                                 <label for="remember"> Remember Me</label>
+                                                -->
+                                                <a href="http://phpoll.com/recover" tabindex="5" class="forgot-password">Forgot Password?</a>
                                             </div>
                                             <div class="col-xs-5 pull-right">
                                                 <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-primary" value="Log In">
@@ -69,7 +71,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="form-group">
+                                    <!--<div class="form-group">
                                         <div class="row">
                                             <div class="col-lg-12">
                                                 <div class="text-center">
@@ -78,6 +80,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    -->
                                 </form>
                             </div>
                         </ul>
