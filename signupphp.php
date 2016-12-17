@@ -14,8 +14,12 @@
 		die('could not connect: '.mysql_error());
 	}
 	mysql_select_db("opera", $con);
-	$q="INSERT INTO `users` (`uname`, `pass`, `Fname`, `Lname`, `email`, `address`, `Bdate`, `Sex`, `city`, `utype`) VALUES ('".$uname."', '".$pass."', '".$fname."', '".$lname."', '".$email."', NULL, '".$bdate."', '".$sex."', '$city', '0');";
-	echo $q;
+	$q="INSERT INTO `users` (`uname`, `pass`, `Fname`, `Lname`, `email`, `Bdate`, `Sex`, `city`, `utype`, `address`) VALUES ('".$uname."', '".$pass."', '".$fname."', '".$lname."', '".$email."', '".$bdate."', '".$sex."', '".$city."', '0', ";
+	if ($address=="") 
+		$q=$q."NULL";
+	else
+		$q=$q."'".$address."'";
+	$q=$q.");";
 	$r=mysql_query($q, $con);
 	if($r)
 	{
