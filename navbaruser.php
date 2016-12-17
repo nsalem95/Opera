@@ -13,6 +13,12 @@
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
+        <li class="dropdown" style="float:right;">
+          <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo $_SESSION['uname'];?><span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">
+              <a class="dropdown-item" href="editprofile.php">Profile</a>
+              <a class="dropdown-item" href="logout.php">Logout</a>
+            </div>
+        </li>
       </ul>
-      
     </nav>

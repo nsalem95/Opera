@@ -1,3 +1,5 @@
+<?php session_start();?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -19,7 +21,11 @@
     <link rel="stylesheet" type="text/css" href="css/navdropdown.css">
   </head>
   <body>
-    <?php include("navbarguest.php"); ?>
+    <?php 
+    if(isset($_SESSION['uname']))       
+      include("navbaruser.php");      
+    else        
+      include("navbarguest.php");    ?>
 
     <!-- Carousel
     ================================================== -->
