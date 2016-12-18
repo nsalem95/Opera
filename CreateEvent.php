@@ -50,7 +50,7 @@
   <h1 class="	" style="color :white ;padding-left:1%"></h1>  
   <br>
   <div>
-	  <form action="CreateEventphp.php" method="post" style="border: 2px solid white;border-radius: 8px;padding-top: 1%; padding-left:1% ;padding-right:1% ;width:460px; margin-right:auto; margin-left:auto; ;background-color:#FFFFFF;background-size: 100%">
+	  <form action="CreateEventphp.php" method="post"	enctype="multipart/form-data" style="border: 2px solid white;border-radius: 8px;padding-top: 1%; padding-left:1% ;padding-right:1% ;width:460px; margin-right:auto; margin-left:auto; ;background-color:#FFFFFF;background-size: 100%">
   <div class="form-group">
     <label for="exampleInputEmail1">Event Name</label>
     <input type="text" name="EventName" style="" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter event name">
