@@ -53,6 +53,7 @@ $con=mysql_connect("localhost", "root", "");
 <div class="form-group row" style="margin-left: 0.3%; margin-right: 2%;">
   <label for="Email" class="col-form-label">Email</label>
   <div class="">
+    <input style="display: none;" name="Password" class="form-control" type="password" value="<?php echo $x['pass']; ?>" id="pass">
     <input required name="Email" class="form-control" type="email" value="<?php echo $x['email']; ?>" id="Email" value="">
   </div>
 <div class="form-group row" style="margin-left: 0.3%; margin-right: 2%; margin-bottom: 1px;">
@@ -90,7 +91,7 @@ $con=mysql_connect("localhost", "root", "");
       </label>
     </div>
     <label style="display: block;" for="confirm-pass" class="col-form-label">Confirm Password</label>
-    <input name="Password" style="display: inline-block; width: 40%;" class="form-control" type="text" placeholder="Confirm Password" id="confirm-pass" required>
+    <input name="ConfirmPassword" style="display: inline-block; width: 40%;" class="form-control" type="password" placeholder="Confirm Password" id="confirm-pass" required>
 <input style="display: inline-block; float: right;" type="submit" name="register-submit" id="register-submit" tabindex="4" class="btn btn-primary" value="Save">
 </div>
 
