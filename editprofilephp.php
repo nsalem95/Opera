@@ -1,5 +1,7 @@
 <?php
-	$uname=$_POST["UserName"];
+	session_start();
+	$uname=$_SESSION['uname'];
+	$pass=$_POST["Password"];
 	$fname=$_POST["FirstName"];
 	$lname=$_POST["LastName"];
 	$email=$_POST["Email"];
@@ -7,7 +9,14 @@
 	$bdate=$_POST["BirthDate"];
 	$sex=$_POST["Gender"];
 	$city=$_POST["City"];
-
+	$confirm=$_POST["ConfirmPassword"];
+	if ($pass != $confirm) {
+		echo '<script type="text/javascript">
+          window.onload = function () { alert("Wrong Password"); }
+			</script>';
+		echo "<script>setTimeout(\"location.href = 'editprofile.php';\",0);</script>";
+		exit();
+	}
 	$con=mysql_connect("localhost", "root", "");
 	if (!$con) {
 		die('could not connect: '.mysql_error());
