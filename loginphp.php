@@ -1,10 +1,7 @@
 <?php
 	$uname=$_POST["username"];
 	$pass=$_POST["password"];
-	$fname=$_POST["FirstName"];
-	$lname=$_POST["LastName"];
-	$email=$_POST["Email"];
-	
+
 	$con=mysql_connect("localhost", "root", "");
 	if (!$con) {
 		die('could not connect: '.mysql_error());

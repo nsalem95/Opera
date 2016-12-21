@@ -22,13 +22,13 @@
                     <div class="text-center"><h3><b>Register</b></h3></div>
                 <form id="ajax-register-form" action="signup.php" method="post" role="form" autocomplete="off">
                   <div class="form-group">
-                    <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
+                    <input required type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="">
                   </div>
                   <div class="form-group">
-                    <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
+                    <input required type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address" value="">
                   </div>
                   <div class="form-group">
-                    <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
+                    <input required type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password">
                   </div>
                   <div class="form-group">
                     <div class="row">
@@ -49,12 +49,12 @@
                                 <form id="ajax-login-form" action="loginphp.php" method="post" role="form" autocomplete="off">
                                     <div class="form-group">
                                         <label for="username">Username</label>
-                                        <input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
+                                        <input required type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value="" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
+                                        <input required type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
                                     </div>
 
                                     <div class="form-group">
