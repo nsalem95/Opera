@@ -65,15 +65,15 @@
 <form action="AddHallphp.php" method="post" style="border: 2px solid white;border-radius: 8px;padding-top: 1%; padding-left:1% ;padding-right:1% ;padding-bottom:2%;width:460px; margin-right:auto; margin-left:auto; ;background-color:#FFFFFF;background-size: 100%">
   <div class="form-group">
     <label for="exampleinputHallName">Hall Name</label>
-    <input  type="text" class="form-control" style="width:70%" id="exampleinputHallName" name="HallName" placeholder="Hall Name">
+    <input  type="text" class="form-control" style="width:70%" required id="exampleinputHallName" name="HallName" placeholder="Hall Name">
   </div>
   <div class="form-group">
     <label for="exmaplenumberofseats">Number Of Seats</label>
-    <input type="number" class="form-control" style="width:70%;" name="NumberOfSeats" id="exmaplenumberofseats" placeholder="400">
+    <input type="number" class="form-control" style="width:70%;"  required id="exmaplenumberofseats" name="NumberOfSeats" placeholder="400">
   </div>	
   <div class="form-group">   
    <label for="exmaplenumberofseatsperrow">Setas Per Row</label>
-    <input type="number" class="form-control" style="width:70%;" name="SeatsPerRow id="exmaplenumberofseatsperro" placeholder="40">
+    <input type="number" class="form-control" style="width:70%;"  required id="exmaplenumberofseatsperro" name="SeatsPerRow" placeholder="40">
   </div>
   
   <button type="submit" class="btn btn-primary">Submit</button>
