@@ -1,4 +1,34 @@
-<?php session_start();?>
+<?php session_start();
+$q="SELECT * FROM event WHERE `featured`=1";
+$q2="SELECT * FROM event WHERE `featured` IS NULL";
+$con=mysql_connect("localhost", "root", "");
+  if (!$con) {
+    die('could not connect: '.mysql_error());
+  }
+  mysql_select_db("opera", $con);
+  $r=mysql_query($q, $con);
+  $r2=mysql_query($q2, $con);
+  $feat=True;
+  $i=0;
+  while ($i < 3 || $feat) 
+  {
+    if ($row=mysql_fetch_array($r)) 
+    {
+      $events[$i]=$row;
+    }
+    else
+    {
+      $feat=False;
+      if ($i >= 3)
+      {
+        break;
+      }
+      $row2=mysql_fetch_array($r2);
+      $events[$i]=$row2;
+    }
+    $i+=1;
+  }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,8 +41,6 @@
     
     <!-- Custom styles for the carousel -->
     <link href="css/carousel.css" rel="stylesheet">
-    <!--dropdown menus navbar css-->
-    <link rel="stylesheet" type="text/css" href="css/navdropdown.css">
   </head>
   <body>
     <?php 
@@ -26,41 +54,38 @@
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
       <!-- Indicators -->
       <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <?php 
+        for ($j=0; $j < $i; $j++) 
+        { 
+          echo '<li data-target="#myCarousel" data-slide-to="'.$j.'"';
+          if ($j == 0) {
+            echo ' class="active"';
+          }
+          echo '></li>';
+        }
+         ?>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <img class="first-slide" src="images/1.jpg" alt="First slide">
-          <div class="container">
-            <div class="carousel-caption text-xs-left">
-              <h1>Example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
+        <?php 
+        for ($j=0; $j < $i; $j++) 
+        { 
+          echo '<div class="carousel-item';
+          if ($j == 0) {
+             echo ' active';
+          }
+          echo '">';
+          echo '<img class="first-slide" src="EventImages/'.$events[$j]['poster'].'.jpg" alt="Event Poster">
+            <div class="container">
+              <div class="carousel-caption text-xs-right">
+                <h1>'.$events[$j]['name'].'</h1>
+                <p>'.$events[$j]['edescription'].'</p>
+                <p><a class="btn btn-lg btn-primary" href="#" role="button">Reserve seat</a></p>
+              </div>
             </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="second-slide" src="images/2.jpg" alt="Second slide">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img class="third-slide" src="images/3.jpg" alt="Third slide">
-          <div class="container">
-            <div class="carousel-caption text-xs-right">
-              <h1>One more for good measure.</h1>
-              <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
-              <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
-            </div>
-          </div>
-        </div>
+          </div>';
+        }
+        
+         ?>
       </div>
       <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
         <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -71,6 +96,23 @@
         <span class="sr-only">Next</span>
       </a>
     </div><!-- /.carousel -->
+    <?php  
+    /*
+    for ($j=0; $j < $i; $j++) 
+    { 
+
+      echo '<hr class="featurette-divider">
+      <div class="row featurette">
+        <div class="col-md-7 push-md-4">
+          <h2 class="featurette-heading">'.$events[$j]['name'].'<span class="text-muted">'.$events[$j]['edate'].'</span></h2>
+          <p class="lead">'.$events[$j]['edescription'].'</p>
+        </div>
+        <div class="col-md-5 pull-md-7">
+          <img class="featurette-image img-fluid mx-auto" style="height:400px; width:400px; margin-left:10%;" src="EventImages/'.$events[$j]['poster'].'.jpg" alt="Event Poster">
+        </div>
+      </div>';
+    }*/
+      ?>
      <!-- FOOTER -->
      <?php include("footer.php") ?>
   </body>
