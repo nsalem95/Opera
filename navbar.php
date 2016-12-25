@@ -7,9 +7,29 @@
         <li class="nav-item">
           <a class="nav-link" href="index.php">Home</a>
         </li>
-        <li class="nav-item">
+        <?php
+        if(isset($_SESSION['uname']))  
+        {
+          if ($_SESSION['utype'] > 0) 
+          {
+            echo '<li class="dropdown nav-item">
+          <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">Events<span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu dropdown-lr animated flipInX" role="menu">
+              <a class="dropdown-item" href="Calendar.php">View Events</a>
+              <a class="dropdown-item" href="CreateEvent.php">Add Event</a>
+            </div>
+        </li>';
+          }
+          else
+            echo '<li class="nav-item">
           <a class="nav-link" href="Calendar.php">Calendar</a>
-        </li>
+        </li>';
+        }
+        else
+          echo '<li class="nav-item">
+          <a class="nav-link" href="Calendar.php">Calendar</a>
+        </li>';
+        ?>
         <li class="nav-item">
           <a class="nav-link" href="about.php">About</a>
         </li>
