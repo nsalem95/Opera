@@ -35,7 +35,7 @@ $con=mysql_connect("localhost", "root", "");
     </style>
   </head>
   <body>
-    <?php include("navbaruser.php"); ?>
+    <?php include("navbar.php"); ?>
     <!--Edit Profile Form-->
     <form action="editprofilephp.php" method="post" style="border: 2px solid white;border-radius: 8px;padding-top: 1%; padding-left:2% ;padding-right:2%;padding-bottom: 1%; width:450px; margin-right:auto; margin-left:auto; margin-top: 4% ;background-color:#FFFFFF;background-size: 100%">
    

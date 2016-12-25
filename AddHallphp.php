@@ -15,11 +15,11 @@ if(!$con)
 {
 	die('could not connect: '.mysql_error());
 }
-mysql_select_db("Opera",$con);
+mysql_select_db("opera",$con);
 
 $q="insert into `hall` (`hname`,`seats`,`hrows`) values('".$HallName."',".$NumberOfSeats.",".$SeatsPerRow.")" ;
 
-//echo $q;
+echo $q;
 
 echo '<script type="text/javascript">
 window.onload=function() {alert("Successfuly inserted")}
