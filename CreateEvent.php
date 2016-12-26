@@ -57,7 +57,7 @@ echo "<option value=\"". $row['hname'] ."\">" . $row['hname'] . "</option>";
   <div class="form-group">
   <label for="example-datetime-local-input" class=" col-form-label">Date and time</label>
   <div >
-    <input required class="form-control" type="datetime-local" name="Date"  style="" value="2016-12-19T19:00:00" id="example-datetime-local-input">
+    <input required class="form-control" type="datetime-local" name="Date"  style="" value="2016-12-31T19:00:00" id="example-datetime-local-input">
   </div>
   <br>
   <div class="form-group">
@@ -66,7 +66,7 @@ echo "<option value=\"". $row['hname'] ."\">" . $row['hname'] . "</option>";
     </div>
   
   <br>
-  <button type="submit" name="Submit" class="btn btn-primary">Submit</button>
+  <button type="submit" name="Submit" class="btn btn-primary">Add Event</button>
   </div>
 </form>
 	  

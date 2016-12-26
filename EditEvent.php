@@ -133,7 +133,7 @@ mysql_select_db("Opera",$con);
     </div>
   
   <br>
-  <button type="submit" name="Submit"   value="submit" class="btn btn-primary"  onclick="myFunction();" >Submit</button>
+  <button type="submit" name="Submit"   value="submit" class="btn btn-primary"  onclick="myFunction();" >Update</button>
   </div>
 </form>
 	  
