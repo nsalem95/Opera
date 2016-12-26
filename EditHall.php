@@ -95,7 +95,7 @@ $con=mysql_connect("localhost","root","");
 mysql_select_db("Opera",$con);
 $sql = mysql_query("SELECT hname from hall",$con);
 while ($row = mysql_fetch_array($sql)){
-echo "<option value=". $row['hname'] .">" . $row['hname'] . "</option>";
+echo "<option value=\"". $row['hname'] ."\">" . $row['hname'] . "</option>";
 }
 
 ?>
