@@ -106,30 +106,12 @@
                                         <input required type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" autocomplete="off">
                                     </div>
 
-                                    <div class="form-group">
-                                        <div class="row">
-                                            <div style="margin-top: 2.5%;" class="col-xs-7">
-                                                <!--<input type="checkbox" tabindex="3" name="remember" id="remember" value = "remember">
-                                                <label for="remember"> Remember Me</label>
-                                                -->
-                                                <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                            </div>
-                                            <div class="col-xs-5 pull-right">
+                                    
+                                            <div class="col-xs-5" style="float: right;">
                                                 <input type="submit" name="login-submit" id="login-submit" tabindex="4" class="btn btn-primary" value="Log In">
                                             </div>
                                         </div>
                                     </div>
-
-                                    <!--<div class="form-group">
-                                        <div class="row">
-                                            <div class="col-lg-12">
-                                                <div class="text-center">
-                                                    <a href="" tabindex="5" class="forgot-password">Forgot Password?</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    -->
                                 </form>
                             </div>
                         </ul>

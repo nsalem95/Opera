@@ -65,7 +65,7 @@ echo(' <p style="font-size:30px; padding-left:3%"">'.$row[3].'</strong></p>');
   if($_SESSION['utype'] > 0)
   {
   echo '<a style="margin-left: 20px;" class="btn btn-primary" href="EditEvent.php?ename='.$name.'" role="button">Edit Event</a>';
-  echo '<a style="margin-left: 20px;" class="btn btn-primary" href="CancelEvent.php?ename='.$name.'" role="button">Cancel Event</a>';
+  echo '<a OnClick="javascript: return confirm(\'Please confirm deletion\');" style="margin-left: 20px;" class="btn btn-primary" href="CancelEvent.php?ename='.$name.'" role="button">Cancel Event</a>';
 }
 }
   ?>
