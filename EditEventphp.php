@@ -38,7 +38,7 @@ if (  is_uploaded_file($_FILES["EventPoster"]["tmp_name"]) )
 	//store uploaded file
 	move_uploaded_file($_FILES['EventPoster']["tmp_name"],'EventImages\\'.$eventname2.'.jpg');
 
- $str = "UPDATE Event SET edate='".substr($date,0,10)."', etime= '".substr($date,11,8)."', name= '".$eventname."', edescription= '".$description."', poster= '".$eventname."', featured= 'NULL', hnumber = ".$hno[0]." where name ='".$old."'";
+ $str = "UPDATE Event SET edate='".substr($date,0,10)."', etime= '".substr($date,11,8)."', name= '".$eventname."', edescription= '".$description."', poster= '".$eventname2."', featured= 'NULL', hnumber = ".$hno[0]." where name ='".$old."'";
  
  //( edate,etime, name, edescription, poster, featured, hnumber) SELECT '". substr($date,0,10)."', '". substr($date,11,8)."',  \"".$eventname."\", \"".$description."\",\"".$eventname ."\", 1, hno from hall WHERE hname=\"".$hallnum."\"";
 
@@ -66,7 +66,7 @@ if ($result)
  echo '<script type="text/javascript">
           window.onload = function () { alert("Event UPDATED Successfully!"); }
 			</script>';
-		echo "<script>setTimeout(\"location.href = 'CreateEvent.php';\",2);</script>";
+		echo "<script>setTimeout(\"location.href = 'Calendar.php';\",2);</script>";
 		exit();
 }	
 	
