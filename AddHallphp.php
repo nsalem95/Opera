@@ -19,14 +19,23 @@ mysql_select_db("opera",$con);
 
 $q="insert into `hall` (`hname`,`seats`,`hrows`) values('".$HallName."',".$NumberOfSeats.",".$SeatsPerRow.")" ;
 
-echo $q;
+
+$c=mysql_query($q,$con);
+
+for($i=1;$i<=$NumberOfSeats;$i++)
+{
+	$q="insert into `seat` (`sno`,`hnumber`) select ".$i.", hno from hall where hname='".$HallName."'";
+	$c=mysql_query($q,$con);
+
+}
+
 
 echo '<script type="text/javascript">
 window.onload=function() {alert("Successfuly inserted")}
 </script>';
 echo"<script>setTimeout(\"location.href = 'AddHall.php';\",0);</script>";
 
-$c=mysql_query($q,$con);
+
 
 
 
