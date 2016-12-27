@@ -104,13 +104,13 @@ $reserved=array();
          <div style="color:white; width:30%; float: right; margin-top: 40px; margin-right: 40px;">
          <div class="form-group" >
     <label for="exampleInputEmail1">Credit Card Number</label>
-    <input required type="text" name="EventName"  maxlength="16"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter 16 digits">
+    <input required type="number" name="Credit"  maxlength="16"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter 16 digits">
    
   </div>
   
   <div class="form-group">
     <label for="exampleTextarea">Pin number</label>
-    <textarea required class="form-control" name="Description" style="" id="exampleTextarea" rows="1" placeholder=""></textarea> 
+    <input type="password" name="" required class="form-control" name="Description" id="exampleTextarea" rows="1" placeholder="">
   </div>
   
   
@@ -156,7 +156,7 @@ $reserved=array();
 
   </form>
 
-  <?php 
+  <?php /*
     echo '<script>
           var box;
           var st="";
@@ -173,7 +173,7 @@ $reserved=array();
           page+=\"';\";
           ";
 
-          echo "setTimeout(page,5);</script>";
+          echo "setTimeout(page,5);</script>";*/
    ?>
   <br><br><br><br><br><br><br><br><br><br><br><br><br>
   <?php include('footer.php'); ?>

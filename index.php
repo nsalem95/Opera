@@ -71,9 +71,7 @@ $con=mysql_connect("localhost", "root", "");
           echo '<img class="first-slide" src="EventImages/'.$events[$j]['poster'].'.jpg" alt="Event Poster">
             <div class="container">
               <div class="carousel-caption text-xs-right">
-                <h1>'.$events[$j]['name'].'</h1>
-                <p>'.$events[$j]['edescription'].'</p>
-                <p><a class="btn btn-lg btn-primary" href="#" role="button">Reserve seat</a></p>
+                <p><a class="btn btn-lg btn-primary" href="event.php?id='.$events[$j]['name'].'" role="button">More Details</a></p>
               </div>
             </div>
           </div>';

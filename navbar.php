@@ -30,6 +30,7 @@
           echo '<li class="nav-item">
           <a class="nav-link" href="Calendar.php">Calendar</a>
         </li>';
+
         ?>
         
         <?php  
@@ -58,12 +59,7 @@
             </div>
         </li>';
           }
-          echo '<li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>';
+          
         echo '<li class="dropdown" style="float:right;">
           <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">'.$_SESSION['uname'].'<span class="caret"></span></a>
             <div class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">
@@ -131,6 +127,12 @@
                         </ul>
                     </li>';
         }
+        echo '<li class="nav-item">
+          <a class="nav-link" href="about.php">&nbsp&nbsp&nbsp&nbspAbout</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact Us</a>
+        </li>';
         ?>
       </ul>
     </nav>

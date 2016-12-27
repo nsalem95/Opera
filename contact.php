@@ -23,11 +23,8 @@
   <body >
   
 	<?php include("navbar.php"); ?>
-<<<<<<< HEAD
-	<?php include("footer.php"); ?>
-</body>
-</html>
-=======
+
+
 	  <!--  FORM!!!!   -->
 	
 	
@@ -56,13 +53,8 @@
 </div>
 	
 	
-	
-   
-   
-		
-
 	<!-- FOOTER -->
       <?php include("footer.php"); ?>
   </body>
 </html>
->>>>>>> fcfa94e7f4a3d74705286d9b59c2601988b749d6
+

@@ -3,7 +3,21 @@ session_start();
 $name=$_POST['EventName'];
 $seats=$_POST["NoSeats"];
 $arr=array();
-
+for ($i=1; $i < $seats+1; $i++) 
+{ 
+	if (isset($_POST['checkbox'.$i])) 
+	{
+		break;
+	}
+	else if($i == $seats)
+	{
+		echo '<script type="text/javascript">
+          window.onload = function () { alert("No seat selected"); }
+			</script>';
+		echo "<script>setTimeout(\"location.href = 'Calendar.php';\",0);</script>";
+		exit();
+	}
+}
 
 $con=mysql_connect("localhost", "root", "");
 	if (!$con) {

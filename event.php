@@ -52,7 +52,7 @@ $result =mysql_query( $str, $con);
 
  
 echo('<img src="EventImages\\'.$pic.'.jpg'.'"class="rounded " style="width:100%;height:400px;"  >');
-echo(' <p style="font-size:48px; padding-left:1%""><strong>'.$row[2].'</strong> <span style="font-size:20px;padding-right:1%;float:right">'.$row[1].' at '.$row[6].'<br>'.$hallname[0].' Hall</span></p>');
+echo(' <p style="font-size:48px; padding-left:1%""><strong>'.$row[2].'</strong> <span style="font-size:20px;padding-right:1%;float:right">'.$row[1].' at '.$row[6].'<br>'.$hallname[0].'</span></p>');
 
 echo(' <p style="font-size:30px; padding-left:3%"">'.$row[3].'</strong></p>');
 
