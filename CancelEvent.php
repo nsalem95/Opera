@@ -5,7 +5,6 @@
 	}
 	mysql_select_db("opera", $con);
 	$q='DELETE FROM `event` WHERE `event`.`name` = "'.$_GET['ename'].'"';
-	echo $q;
 	$r=mysql_query($q, $con);
 	if($r)
 	{

@@ -23,7 +23,6 @@ $con=mysql_connect("localhost", "root", "");
 		if (isset($_POST['checkbox'.$i])) 
 		{
 			$q="insert into seat_reserved(`rid`, `sno`, `hno`) Values(".$max.", ".$i.",".$_POST['hno'].")";
-			echo $q;
 			$r=mysql_query($q, $con);
 		}
 	}

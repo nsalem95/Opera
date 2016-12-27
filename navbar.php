@@ -17,6 +17,7 @@
             <div class="dropdown-menu dropdown-menu dropdown-lr animated flipInX" role="menu">
               <a class="dropdown-item" href="Calendar.php">View Events</a>
               <a class="dropdown-item" href="CreateEvent.php">Add Event</a>
+              <a class="dropdown-item" href="AvailableSeats.php">View Reservations</a>
             </div>
         </li>';
           }
@@ -30,15 +31,13 @@
           <a class="nav-link" href="Calendar.php">Calendar</a>
         </li>';
         ?>
-        <li class="nav-item">
-          <a class="nav-link" href="about.php">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.php">Contact Us</a>
-        </li>
+        
         <?php  
         if (isset($_SESSION['uname']))
         {
+          echo '<li class="nav-item">
+          <a class="nav-link" href="Reservations.php">Reservations</a>
+        </li>';
           if ($_SESSION['utype']>0) 
           {
             echo '<li class="dropdown nav-item">
@@ -49,7 +48,22 @@
             </div>
         </li>';
           }
-          
+          if ($_SESSION['utype'] == 2) 
+          {
+            echo '<li class="dropdown nav-item">
+          <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">Auth<span class="caret"></span></a>
+            <div class="dropdown-menu dropdown-menu dropdown-lr animated flipInX" role="menu">
+              <a class="dropdown-item" href="ApproveAuthority.php">Approve Authority</a>
+              <a class="dropdown-item" href="DeleteUser.php">Remove User</a>
+            </div>
+        </li>';
+          }
+          echo '<li class="nav-item">
+          <a class="nav-link" href="about.php">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact.php">Contact Us</a>
+        </li>';
         echo '<li class="dropdown" style="float:right;">
           <a href="" class="dropdown-toggle nav-link" data-toggle="dropdown">'.$_SESSION['uname'].'<span class="caret"></span></a>
             <div class="dropdown-menu dropdown-menu-right dropdown-lr animated flipInX" role="menu">

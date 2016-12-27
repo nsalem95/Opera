@@ -61,7 +61,7 @@ echo(' <p style="font-size:30px; padding-left:3%"">'.$row[3].'</strong></p>');
   <?php
   if(isset($_SESSION['uname']))
   {
-  echo '<a style="margin-left: 20px;" class="btn btn-primary" href="Reserve.php?ename='.$name.'" role="button">Reserve Now</a>';
+  echo '<a style="margin-left: 20px;" class="btn btn-primary" href="Reserve.php?Ename='.$name.'" role="button">Reserve Now</a>';
   if($_SESSION['utype'] > 0)
   {
   echo '<a style="margin-left: 20px;" class="btn btn-primary" href="EditEvent.php?ename='.$name.'" role="button">Edit Event</a>';

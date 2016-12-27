@@ -1,6 +1,6 @@
 <?php session_start();
 $q="SELECT * FROM event WHERE `featured`=1";
-$q2="SELECT * FROM event WHERE `featured` IS NULL";
+$q2="SELECT * FROM event WHERE `featured` <> 1";
 $con=mysql_connect("localhost", "root", "");
   if (!$con) {
     die('could not connect: '.mysql_error());

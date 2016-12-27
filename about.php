@@ -30,6 +30,8 @@
 		<p>&nbsp;- Provide excellent venues, facilities and services to both artists and the audience.</p>
 
 		<p>With its appealing mix of high-quality cultural events and its unique venues and state-of-the-art facilities the&nbsp;<strong>Cairo Opera House</strong>&nbsp;is exceptionally well-suited to fulfill its mission and become a&nbsp;<strong>symbol of art</strong>&nbsp;and culture in&nbsp;<strong>Egypt and the world</strong>.</p>
-	</div
+	</div>
+	<br><br><br><br><br>
+	<?php include("footer.php"); ?>
 </body>
 </html>
