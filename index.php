@@ -34,8 +34,6 @@ $con=mysql_connect("localhost", "root", "");
 <html lang="en">
   <head>
     
-    <meta name="description" content="">
-    <meta name="author" content="">
     <?php include("head.php"); ?>
     <title>Cairo Opera House</title>
     
@@ -43,11 +41,7 @@ $con=mysql_connect("localhost", "root", "");
     <link href="css/carousel.css" rel="stylesheet">
   </head>
   <body>
-    <?php 
-    if(isset($_SESSION['uname']))       
-      include("navbaruser.php");      
-    else        
-      include("navbarguest.php");    ?>
+    <?php include("navbar.php"); ?>
 
     <!-- Carousel
     ================================================== -->

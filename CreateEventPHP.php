@@ -27,9 +27,9 @@ if ($_FILES["EventPoster"]["error"] > 0)
 $eventname2 = preg_replace('/\s+/', '_', $eventname);
 
 //store uploaded file
-move_uploaded_file($_FILES['EventPoster']["tmp_name"],'C:\xampp\htdocs\GitHub\EventImages\\'.$eventname2.'.jpg');
+move_uploaded_file($_FILES['EventPoster']["tmp_name"],'EventImages\\'.$eventname2.'.jpg');
 
-$str = "INSERT INTO Event ( edate,etime, name, edescription, poster, hnumber) VALUES ('". substr($date,0,10)."', '". substr($date,11,8)."',  \"".$eventname."\", \"".$description."\",\"".$eventname ."\",".$hallnum.")";
+$str = "INSERT INTO Event ( edate,etime, name, edescription, poster, featured, hnumber) SELECT '". substr($date,0,10)."', '". substr($date,11,8)."',  \"".$eventname."\", \"".$description."\",\"".$eventname2 ."\", 1, hno from hall WHERE hname=\"".$hallnum."\"";
 
 
 $result =mysql_query( $str, $con);
@@ -48,7 +48,7 @@ if ($result)
  echo '<script type="text/javascript">
           window.onload = function () { alert("Event Added Successfully!"); }
 			</script>';
-		echo "<script>setTimeout(\"location.href = 'CreateEvent.php';\",2);</script>";
+		echo "<script>setTimeout(\"location.href = 'Calendar.php';\",2);</script>";
 		exit();
 }	
 	

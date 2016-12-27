@@ -2,9 +2,7 @@
 <html lang="en">
   <head>
     <?php include("head.php"); ?>
-    <meta name="description" content="">
-    <meta name="author" content="">
-
+    
     <title>Sign up</title>
 
     <style type="text/css">
@@ -16,7 +14,7 @@
     </style>
   </head>
   <body>
-    <?php include("navbarguest.php"); ?>
+    <?php include("navbar.php"); ?>
     <!--Register Form-->
     <form action="signupphp.php" method="post" style="border: 2px solid white;border-radius: 8px;padding-top: 1%; padding-left:2% ;padding-right:2% ;width:450px; margin-right:auto; margin-left:auto; margin-top: 4% ;background-color:#FFFFFF;background-size: 100%">
     <div class="" style="margin-bottom: 1px;">

@@ -25,6 +25,7 @@
 	{
 		session_start();
 		$_SESSION['uname'] = $uname;
+		$_SESSION['utype'] = 0;
 		echo "user registered";
 		echo "<script>setTimeout(\"location.href = 'index.php';\",0);</script>";
 		exit();

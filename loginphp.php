@@ -9,12 +9,12 @@
 	mysql_select_db("opera", $con);
 	$q="SELECT * FROM users WHERE uname=\"".$uname."\" and pass=\"".$pass."\"";
 	$r=mysql_query($q, $con);
-	$x=mysql_fetch_row($r);
+	$x=mysql_fetch_array($r);
 	if($x)
 	{
-		
 		session_start();
 		$_SESSION['uname'] = $uname;
+		$_SESSION['utype'] = $x['utype'];
 		echo "<script>setTimeout(\"location.href = 'index.php';\",0);</script>";
 		exit();
 	}
